@@ -1,0 +1,50 @@
+<div class="Panel">
+	<div class="Selector">
+		<a class="tabs" href="#View" onclick="changeView(event, 'vizualizare')">Vizualizare</a>
+		<a class="tabs" href="#Add" onclick="changeView(event, 'adaugare')">Adaugare</a>
+		<a class="tabs" href="#Del" onclick="changeView(event, 'stergere')">Stergere</a>
+	</div>
+	<div id="vizualizare" class="Content">
+	<br>
+		<table style="width:100%">
+			<tr>
+				<th>ID</th>
+				<th>Lastname</th>
+				<th>FirstName</th>
+				<th>Age</th>
+				<th>Gender</th>
+				<th>City</th>
+				<th>Salary</th>
+				<th>Job</th>
+			</tr>
+			<?php 
+				$sql = "SELECT * FROM Employees";
+				$result= $conn->query($sql);
+				if ($result->num_rows>0){
+					while ($row= $result->fetch_assoc()) {
+						echo "<tr>
+								<td>" . $row["id"]. "</td>
+								<td>". $row["Last_Name"]. "</td>
+								<td>" . $row["First_Name"]. "</td>
+								<td>" . $row["Age"]. "</td>
+								<td>" . $row["Gender"]. "</td>
+								<td>" . $row["City_id"]. "</td>
+								<td>" . $row["Salary"]. "</td>
+								<td>" . $row["Job_id"]. "</td>
+							</tr>";
+					}
+				}
+			?>
+		</table>
+	</div>
+	<div id="adaugare" class="Content">
+		
+	</div>
+	<div id="stergere" class="Content">
+	
+	</div>
+	
+</div>
+
+
+<script src="../includes/Script.js"></script>

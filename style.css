@@ -1,0 +1,76 @@
+body {
+	min-width:1050px;
+}
+.header {
+	margin:-4px;
+	background-color:#002080;
+	height:100px;
+	border :2px #cccccc solid;
+	border-radius:5px;
+}
+.navbar {
+	margin:10px;
+	padding:20px;
+}
+.nav-link {
+	margin:20px;
+	height:50px;
+	padding:17px;
+	background-color:#002db3;
+	border :2px #cccccc solid;
+	border-radius:5px;
+}
+.Panel {
+	margin:20px 30px 0px 30px;
+	height:200px;
+	background-color:#cccccc;
+	border :2px #cccccc solid;
+	border-radius:5px;
+}
+.Selector{
+	overflow:hidden;
+	padding:7px;
+	border :2px #002db3 solid;
+	background-color:#002080;
+}
+.tabs {
+	margin:8px;
+	background-color:#002db3;
+	padding:5px;
+	border :2px #cccccc solid;
+	border-radius:5px;
+}
+.Content{
+	display: none;
+	padding: 6px 12px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #eee;
+}
+tr:nth-child(odd) {
+ background-color: #fff;
+}
+th {
+  background-color: #002db3;
+  color: #cccccc;
+}
+a {
+	font-size:150%;
+}
+a:link {
+	color:#cccccc;
+	text-decoration:none;
+}
+a:visited {
+	color:#cccccc;
+	text-decoration:none;
+}
+a:hover {
+	color:black;
+	text-decoration:none;
+	border :2px black solid;
+}
