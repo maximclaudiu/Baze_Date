@@ -1,12 +1,16 @@
 <?php
-$host = "localhost";
-$username = "root";
-$user_pass= "";
-$database = "proiect_scoala";
 
-$mysqli= new mysqli ($host, $username, $user_pass, $database);
+$db = "(DESCRIPTION=(ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = bd-dc.cs.tuiasi.ro)(PORT = 1539)))(CONNECT_DATA=(SID=orcl)))" ;
 
-if ($mysqli->connect_errno) {
-	echo "Failed to connect to MySql: (". $mysqli->connect_errno . ")" . $mysqli->connect_error;
-}
+    if($c = OCILogon("bd151", "bd151", $db))
+    {
+        echo "Successfully connected to Oracle.\n";
+        OCILogoff($c);
+    }
+    else
+    {
+        $err = OCIError();
+        echo "Connection failed." . $err[text];
+    }
+
 ?>
