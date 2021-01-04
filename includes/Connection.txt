@@ -1,8 +1,8 @@
 <?php
-$host = "bd-dc.cs.tuiasi.ro";
-$username = "bd151";
-$user_pass= "bd151";
-$database = "Oracle_DB";
+$host = "localhost";
+$username = "root";
+$user_pass= "";
+$database = "proiect_scoala";
 
 $mysqli= new mysqli ($host, $username, $user_pass, $database);
 
