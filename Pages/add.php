@@ -16,30 +16,30 @@
 		if ($_POST['submit']){
 			$mysqli->query($sql);
 	}	}
-	if ($_POST['page']=="jobs")
+	if ($_POST['page']=="jobs") {
 		$sql = "INSERT INTO jobs (Job_id, Name, Degree_required, Salary, Hours_per_day) values 
 			(NULL, '". $_POST['name']."'," .$_POST['degree'].",". $_POST['salary']."," .$_POST['hours'].")";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
-		}
-	if ($_POST['page']=="cities")
+	}	}
+	if ($_POST['page']=="cities") {
 		$sql = "INSERT INTO cities (City_id, Name, Country, Population)	values 
 			(NULL,'". $_POST['name']."','". $_POST['country']."',". $_POST['population'].")";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
-		}
-	if ($_POST['page']=="students")
+	}	}
+	if ($_POST['page']=="students") {
 		$sql = "INSERT INTO students (id, Last_name, First_name, Age, Gender ,City_id, Class)	values 
 			(NULL,'". $_POST['fname']."','". $_POST['lname']."',". $_POST['age'].",'". $_POST['gender']."',".
 			$_POST['city'].",'". $_POST['class']."')";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
-		}
-	if ($_POST['page']=="grades")
+	}	}
+	if ($_POST['page']=="grades") {
 		$sql = "INSERT INTO grades (Registry, Profesor_id, Student_id, Grade, Subject)	values 
 			(NULL,". $_POST['profesor'].",". $_POST['student'].",". $_POST['grade'].",'". $_POST['subject']."')";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
-		}
+		}	}
  ?>
  </html>
