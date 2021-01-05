@@ -14,7 +14,5 @@
 	include "../includes/Content.txt";
 ?>
 
-
-
 </body>
 </html>
