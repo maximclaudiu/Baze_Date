@@ -3,7 +3,7 @@
 <head>
 	<title>Proiect BD</title>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="0; URL=http://localhost/proiectBD/Pages/<?php echo $_POST['page']?>.php" />
+	<meta http-equiv="refresh" content="0; URL=https://proiectbd.herokuapp.com/Pages/<?php echo $_POST['page']?>.php" />
 	<link rel="icon" href="../Images/icon.png">
 	<link rel="stylesheet" href="../style.css">
 </head>

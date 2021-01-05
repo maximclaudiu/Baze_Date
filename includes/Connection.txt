@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$username = "root";
-$user_pass= "";
-$database = "proiect_scoala";
+$host = "eu-cdbr-west-03.cleardb.net";
+$username = "b9165385c17a02";
+$user_pass= "45d43d38";
+$database = "heroku_3ac008ea80821f2";
 
 $mysqli= new mysqli ($host, $username, $user_pass, $database);
 
