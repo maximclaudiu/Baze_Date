@@ -1,4 +1,4 @@
-<form action="/proiectBD/Pages/add.php" method="POST">
+<form action="/Pages/add.php" method="POST">
 	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
 	<label for="name">Last name:</label><br>
 		<input type="text" id="name" name="name" value="" required><br>

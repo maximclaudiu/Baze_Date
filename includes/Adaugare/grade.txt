@@ -1,1 +1,1 @@
-<form action="/proiectBD/Pages/add.php" method="POST">
+<form action="/Pages/add.php" method="POST">

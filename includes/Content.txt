@@ -33,7 +33,6 @@
 	</div>
 	<div id="adaugare" class="Content">
 		<?php
-			echo basename($_SERVER["REQUEST_URI"], ".php";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
 				include "../Includes/Adaugare/employ.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
