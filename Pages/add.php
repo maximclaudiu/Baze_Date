@@ -18,7 +18,7 @@
 	}	}
 	if ($_POST['page']=="jobs") {
 		$sql = "INSERT INTO jobs (Job_id, Name, Degree_required, Salary, Hours_per_day) values 
-			(NULL, '". $_POST['name']."'," .$_POST['degree'].",". $_POST['salary']."," .$_POST['hours'].")";
+			(NULL, '". $_POST['name']."','" .$_POST['degree']."',". $_POST['salary']."," .$_POST['hours'].")";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
 	}	}
