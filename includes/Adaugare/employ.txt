@@ -13,7 +13,7 @@
 			<option value="Undisclosed">
 		  </datalist>
 	  <br>
-	<label for="city">City:</label><br>
+	<label for="city">From City:</label><br>
 	<input list="city" name="City">
 	  <datalist id="city">
 		<option value="1">

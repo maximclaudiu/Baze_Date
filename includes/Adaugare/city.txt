@@ -1,1 +1,10 @@
 <form action="/Pages/add.php" method="POST">
+	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
+	<label for="name">City name:</label><br>
+		<input type="text" id="name" name="name" value="" required><br>
+	<label for="country">Country:</label><br>
+		<input type="text" id="country" name="country" value="" required><br>
+	<label for="population">Total population:</label><br>
+		<input type="text" id="population" name="population" value="" required><br><br>	
+	<input type="submit" name="submit" value="Submit">
+</form>

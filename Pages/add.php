@@ -36,8 +36,8 @@
 			$mysqli->query($sql);
 		}
 	if ($_POST['page']=="grades")
-		$sql = "INSERT INTO grades (Registry, Profesor_id, Student_id, Grade, Discipline)	values 
-			(NULL,". $_POST['profesor'].",". $_POST['student'].",". $_POST['grade'].",'". $_POST['discipline']."')";
+		$sql = "INSERT INTO grades (Registry, Profesor_id, Student_id, Grade, Subject)	values 
+			(NULL,". $_POST['profesor'].",". $_POST['student'].",". $_POST['grade'].",'". $_POST['subject']."')";
 		if ($_POST['submit']){
 			$mysqli->query($sql);
 		}

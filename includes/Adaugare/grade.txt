@@ -1,1 +1,12 @@
 <form action="/Pages/add.php" method="POST">
+	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
+	<label for="profesor">Profesor's name:</label><br>
+		<input type="text" id="profesor" name="profesor" value="" required><br>
+	<label for="student">Student's name:</label><br>
+		<input type="text" id="student" name="student" value="" required><br>
+	<label for="grade">Grade:</label><br>
+		<input type="text" id="grade" name="grade" value="" required><br>
+	<label for="subject">Subject:</label><br>
+		<input type="text" id="subject" name="subject" value="" required><br>
+	<input type="submit" name="submit" value="Submit">
+</form>

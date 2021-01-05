@@ -36,7 +36,7 @@
 					<td>" . $row["Profesor_id"]. "</td>
 					<td>" . $row["Student_id"]. "</td>
 					<td>" . $row["Grade"]. "</td>
-					<td>" . $row["Discipline"]. "</td> </tr>";
+					<td>" . $row["Subject"]. "</td> </tr>";
 		}
 	}
 ?>

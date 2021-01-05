@@ -27,23 +27,22 @@
 				echo "<tr> <th>REGISTRU</th> <th>PROFESOR ID</th>". 
 					"<th>STUDENTS ID</th> <th>GRADE</th> <th>SUBJECT</th> </tr>";
 			
-			include "../Includes/Vizualizare.txt";
+			include "../includes/Vizualizare.txt";
 		?>
 		</table>
 	</div>
 	<div id="adaugare" class="Content">
 		<?php
-			echo basename($_SERVER["REQUEST_URI"], ".php");
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
-				include "../Includes/Adaugare/employ.txt";
+				include "../includes/Adaugare/employ.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
-				include "../Includes/Adaugare/job.txt";
+				include "../includes/Adaugare/job.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
-				include "../Includes/Adaugare/city.txt";
+				include "../includes/Adaugare/city.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
-				include "../Includes/Adaugare/stud.txt";
+				include "../includes/Adaugare/stud.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
-				include "../Includes/Adaugare/grade.txt";
+				include "../includes/Adaugare/grade.txt";
 		?>
 	</div>
 	<div id="stergere" class="Content">
