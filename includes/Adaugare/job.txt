@@ -1,0 +1,12 @@
+<form action="/proiectBD/Pages/add.php" method="POST">
+	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
+	<label for="name">Last name:</label><br>
+		<input type="text" id="name" name="name" value="" required><br>
+	<label for="degree">Degree:</label><br>
+		<input type="text" id="degree" name="degree" value="" required><br>
+	<label for="salary">Salary:</label><br>
+		<input type="text" id="salary" name="salary" value="" required><br>
+	<label for="hours">Work hours per day:</label><br>
+		<input type="text" id="hours" name="hours" value="" required><br>
+	<input type="submit" name="submit" value="Submit">
+</form>

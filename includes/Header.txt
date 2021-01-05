@@ -1,9 +1,9 @@
 <div class="header">
 	<div class="navbar">
-		<a class="nav-link" href="Employees.php">Employees</a>
-        <a class="nav-link" href="Jobs.php">Jobs</a>
-        <a class="nav-link" href="Cities.php">Cities</a>
-        <a class="nav-link" href="Students.php">Students</a>
-        <a class="nav-link" href="Grades.php">Grades</a>
+		<a class="nav-link" href="employees.php">Employees</a>
+        <a class="nav-link" href="jobs.php">Jobs</a>
+        <a class="nav-link" href="cities.php">Cities</a>
+        <a class="nav-link" href="students.php">Students</a>
+        <a class="nav-link" href="grades.php">Grades</a>
 	</div>
 </div>

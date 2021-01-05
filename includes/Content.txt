@@ -7,41 +7,52 @@
 	<div id="vizualizare" class="Content">
 	<br>
 		<table style="width:100%">
-			<tr>
-				<th>ID</th>
-				<th>Lastname</th>
-				<th>FirstName</th>
-				<th>Age</th>
-				<th>Gender</th>
-				<th>City</th>
-				<th>Salary</th>
-				<th>Job</th>
-			</tr>
-			<?php 
-				$sql = "SELECT * FROM Employees";
-				$result= $conn->query($sql);
-				if ($result->num_rows>0){
-					while ($row= $result->fetch_assoc()) {
-						echo "<tr>
-								<td>" . $row["id"]. "</td>
-								<td>". $row["Last_Name"]. "</td>
-								<td>" . $row["First_Name"]. "</td>
-								<td>" . $row["Age"]. "</td>
-								<td>" . $row["Gender"]. "</td>
-								<td>" . $row["City_id"]. "</td>
-								<td>" . $row["Salary"]. "</td>
-								<td>" . $row["Job_id"]. "</td>
-							</tr>";
-					}
-				}
-			?>
+		<?php 
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
+				echo "<tr> <th>ID</th> <th>LAST NAME</th>". 
+					"<th>FIRST NAME</th> <th>AGE</th> <th>GENDER</th>". 
+					"<th>CITY</th> <th>JOB</th> </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
+				echo "<tr> <th>JOB ID</th> <th>JOB NAME</th>". 
+					"<th>DEGREE REQUIRED</th> <th>SALARY</th> 
+					<th>HOURS PER DAY</th>". "</tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
+				echo "<tr> <th>CITY_ID</th> <th>CITY NAME</th>". 
+					"<th>ORIGIN COUNTRY</th> <th>POPULATION</th>  </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+				echo "<tr> <th>STUDENT ID </th> <th>FIRST NAME</th> <th>LAST NAME</th>".
+				"<th>AGE</th> <th>GENDER</th> <th>CITY</th> ".
+				"<th>CLASS</th> </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
+				echo "<tr> <th>REGISTRU</th> <th>PROFESOR ID</th>". 
+					"<th>STUDENTS ID</th> <th>GRADE</th> <th>SUBJECT</th> </tr>";
+			
+			include "../Includes/Vizualizare.txt";
+		?>
 		</table>
 	</div>
 	<div id="adaugare" class="Content">
-		
+		<?php
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
+				include "../Includes/Adaugare/employ.txt";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
+				include "../Includes/Adaugare/job.txt";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
+				include "../Includes/Adaugare/city.txt";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+				include "../Includes/Adaugare/stud.txt";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
+				include "../Includes/Adaugare/grade.txt";
+		?>
 	</div>
 	<div id="stergere" class="Content">
-	
+		<form action="/proiectBD/Pages/delete.php" method="POST">
+			<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
+			<label for="delete">Doriti sa stergeti intrarea cu numarul:</label><br>
+				<input type="text" id="delete" name="delete" value="" required><br>
+			 <input type="submit" name="submit" value="Submit">
+		</form>
+		
 	</div>
 	
 </div>

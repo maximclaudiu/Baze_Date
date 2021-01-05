@@ -1,0 +1,42 @@
+<?php
+	$sql = "SELECT * FROM ". basename($_SERVER["REQUEST_URI"], ".php");
+	$result= $mysqli->query($sql);
+	if ($result->num_rows>0){
+		while ($row = $result->fetch_assoc()) {
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
+				echo " 
+					<tr> <td>" . $row["Id"]. "</td>
+					<td>" . $row["Last_name"]. "</td>
+					<td>" . $row["First_name"]. "</td>
+					<td>" . $row["Age"]. "</td>
+					<td>" . $row["Gender"]. "</td>
+					<td>" . $row["City_id"]. "</td>
+					<td>" . $row["Job_id"]. "</td> </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
+				echo "<tr> <td>" . $row["Job_id"]. "</td>
+					<td>" . $row["Name"]. "</td>
+					<td>" . $row["Degree_required"]. "</td>
+					<td>" . $row["Salary"]. "</td>
+					<td>" . $row["Hours_per_day"]. "</td> </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
+				echo "<tr> <td>" . $row["City_id"]. "</td>
+					<td>" . $row["Name"]. "</td>
+					<td>" . $row["Country"]. "</td>
+					<td>" . $row["Population"]. "</td>					</tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+				echo "<tr> <td>" . $row["Id"]. "</td>
+					<td>" . $row["Last_name"]. "</td>
+					<td>" . $row["First_name"]. "</td>
+					<td>" . $row["Age"]. "</td>
+					<td>" . $row["Gender"]. "</td>
+					<td>" . $row["City_id"]. "</td>
+					<td>" . $row["Class"]. "</td> </tr>";
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
+				echo "<tr> <td>" . $row["Registry"]. "</td>
+					<td>" . $row["Profesor_id"]. "</td>
+					<td>" . $row["Student_id"]. "</td>
+					<td>" . $row["Grade"]. "</td>
+					<td>" . $row["Discipline"]. "</td> </tr>";
+		}
+	}
+?>
