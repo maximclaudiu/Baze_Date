@@ -1,9 +1,29 @@
 <form action="/Pages/add.php" method="POST">
 	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
-	<label for="profesor">Profesor's name:</label><br>
-		<input type="text" id="profesor" name="profesor" value="" required><br>
-	<label for="student">Student's name:</label><br>
-		<input type="text" id="student" name="student" value="" required><br>
+	<label for="profesor">Profesor's ID:</label><br>
+		<input list="profesor" name="profesor" required>
+		<datalist id="profesor">
+			<?php $sql="Select Id from employees";
+			$result= $mysqli->query($sql);
+			if ($result->num_rows>0){
+				while ($row = $result->fetch_assoc()) {
+					echo "<option value=".$row["Id"] .">";
+				}
+			}
+			?>
+		</datalist>
+	<label for="student">Student's ID:</label><br>
+		<input list="student" name="student" required>
+		<datalist id="student">
+			<?php $sql="Select Id from student";
+			$result= $mysqli->query($sql);
+			if ($result->num_rows>0){
+				while ($row = $result->fetch_assoc()) {
+					echo "<option value=".$row["Id"] .">";
+				}
+			}
+			?>
+		</datalist>
 	<label for="grade">Grade:</label><br>
 		<input type="text" id="grade" name="grade" value="" required><br>
 	<label for="subject">Subject:</label><br>

@@ -4,8 +4,7 @@
 	if ($result->num_rows>0){
 		while ($row = $result->fetch_assoc()) {
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
-				echo " 
-					<tr> <td>" . $row["Id"]. "</td>
+				echo " 	<tr> <td>" . $row["Id"]. "</td>
 					<td>" . $row["Last_name"]. "</td>
 					<td>" . $row["First_name"]. "</td>
 					<td>" . $row["Age"]. "</td>
@@ -23,7 +22,7 @@
 					<td>" . $row["Name"]. "</td>
 					<td>" . $row["Country"]. "</td>
 					<td>" . $row["Population"]. "</td>					</tr>";
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="student")
 				echo "<tr> <td>" . $row["Id"]. "</td>
 					<td>" . $row["Last_name"]. "</td>
 					<td>" . $row["First_name"]. "</td>
