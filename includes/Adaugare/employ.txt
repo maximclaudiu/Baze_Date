@@ -1,5 +1,5 @@
 
-<form action="/Pages/add.php" method="POST">
+<form action= "/Pages/add.php" method="POST">
 	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
 	<label for="fname">First name:</label><br>
 		<input type="text" id="fname" name="fname" value="" required><br>
@@ -16,7 +16,7 @@
 		  </datalist>
 	  <br>
 	<label for="city">From City:</label><br>
-	<input list="city" name="City">
+	<input list="city" name="city">
 	  <datalist id="city">
 		<option value="1">
 		<option value="2">
@@ -33,6 +33,6 @@
 		<option value="3">
 		<option value="4">
 		<option value="5">
-	  </datalist>
+	  </datalist><br>
 	<input type="submit" name="submit" value="Submit">
 </form> 

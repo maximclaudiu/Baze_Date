@@ -4,7 +4,7 @@
 		<a class="tabs" href="#Add" onclick="changeView(event, 'adaugare')">Adaugare</a>
 		<a class="tabs" href="#Del" onclick="changeView(event, 'stergere')">Stergere</a>
 	</div>
-	<div id="vizualizare" class="Content">
+	<div id="vizualizare" class="Content" style="display:block">
 	<br>
 		<table style="width:100%">
 		<?php 

@@ -15,7 +15,7 @@
 		  </datalist>
 	  <br>
 	<label for="city">From City:</label><br>
-		<input list="city" name="City">
+		<input list="city" name="city">
 		  <datalist id="city">
 			<option value="1">
 			<option value="2">
