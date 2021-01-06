@@ -3,14 +3,21 @@
 	$result= $mysqli->query($sql);
 	if ($result->num_rows>0){
 		while ($row = $result->fetch_assoc()) {
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees")
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="employees"){
+				$sql2 = "select Name from cities where City_id =".$row["City_id"]."";
+				$result2 =$mysqli->query($sql2);
+				$row2 = $result->fetch_assoc();
+				$sql3 = "select Name from jobs where Job_id =".$row["Job_id"]."";
+				$result3 =$mysqli->query($sql3);
+				$row3 = $result->fetch_assoc();
 				echo " 	<tr> <td>" . $row["Id"]. "</td>
 					<td>" . $row["Last_name"]. "</td>
 					<td>" . $row["First_name"]. "</td>
 					<td>" . $row["Age"]. "</td>
 					<td>" . $row["Gender"]. "</td>
-					<td>" . $row["City_id"]. "</td>
-					<td>" . $row["Job_id"]. "</td> </tr>";
+					<td>" . $row2["Name"]. "</td>
+					<td>" . $row3["Name"]. "</td> </tr>";
+			}
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="jobs")
 				echo "<tr> <td>" . $row["Job_id"]. "</td>
 					<td>" . $row["Name"]. "</td>
@@ -22,20 +29,31 @@
 					<td>" . $row["Name"]. "</td>
 					<td>" . $row["Country"]. "</td>
 					<td>" . $row["Population"]. "</td>					</tr>";
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="student")
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="student"){
+				$sql2 = "select Name from cities where City_id =".$row["City_id"]."";
+				$result2 =$mysqli->query($sql2);
+				$row2 = $result->fetch_assoc();
 				echo "<tr> <td>" . $row["Id"]. "</td>
 					<td>" . $row["Last_name"]. "</td>
 					<td>" . $row["First_name"]. "</td>
 					<td>" . $row["Age"]. "</td>
 					<td>" . $row["Gender"]. "</td>
-					<td>" . $row["City_id"]. "</td>
+					<td>" . $row2["Name"]. "</td>
 					<td>" . $row["Class"]. "</td> </tr>";
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
+			}
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades"){
+				$sql2 = "select Last_name from employees where Id =".$row["Profesor_id"]."";
+				$result2 =$mysqli->query($sql2);
+				$row2 = $result->fetch_assoc();
+				$sql3 = "select Last_name from student where Id =".$row["Student_id_id"]."";
+				$result3 =$mysqli->query($sql3);
+				$row3 = $result->fetch_assoc();
 				echo "<tr> <td>" . $row["Registry"]. "</td>
-					<td>" . $row["Profesor_id"]. "</td>
-					<td>" . $row["Student_id"]. "</td>
+					<td>" . $row2["Last_name"]. "</td>
+					<td>" . $row3["Last_name"]. "</td>
 					<td>" . $row["Grade"]. "</td>
 					<td>" . $row["Subject"]. "</td> </tr>";
+			}
 		}
 	}
 ?>
