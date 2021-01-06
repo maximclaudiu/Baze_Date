@@ -29,7 +29,7 @@
 			$mysqli->query($sql);
 	}	}
 	if ($_POST['page']=="students") {
-		$sql = "INSERT INTO students (id, Last_name, First_name, Age, Gender ,City_id, Class)	values 
+		$sql = "INSERT INTO student (id, Last_name, First_name, Age, Gender ,City_id, Class)	values 
 			(NULL,'". $_POST['fname']."','". $_POST['lname']."',". $_POST['age'].",'". $_POST['gender']."',".
 			$_POST['city'].",'". $_POST['class']."')";
 		if ($_POST['submit']){
