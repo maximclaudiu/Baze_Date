@@ -1,9 +1,15 @@
 <form action="/Pages/add.php" method="POST">
 	<input type="hidden" name="page" value="<?php echo basename($_SERVER["REQUEST_URI"], ".php");?>">
-	<label for="name">Last name:</label><br>
+	<label for="name">Job's name:</label><br>
 		<input type="text" id="name" name="name" value="" required><br>
 	<label for="degree">Degree:</label><br>
-		<input type="text" id="degree" name="degree" value="" required><br>
+		<input list="degree" name="degree" required>
+		  <datalist id="degree">
+			<option value="None">
+			<option value="High School">
+			<option value="University">
+			<option value="Masters">
+		  </datalist><br>
 	<label for="salary">Salary:</label><br>
 		<input type="text" id="salary" name="salary" value="" required><br>
 	<label for="hours">Work hours per day:</label><br>

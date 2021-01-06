@@ -28,7 +28,7 @@
 				echo "<tr> <td>" . $row["City_id"]. "</td>
 					<td>" . $row["Name"]. "</td>
 					<td>" . $row["Country"]. "</td>
-					<td>" . $row["Population"]. "</td>					</tr>";
+					<td>" . $row["Population"]. "</td> </tr>";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="student"){
 				$sql2 = "select Name from cities where City_id =".$row["City_id"]."";
 				$result2 =$mysqli->query($sql2);
@@ -45,7 +45,7 @@
 				$sql2 = "select Last_name from employees where Id =".$row["Profesor_id"]."";
 				$result2 =$mysqli->query($sql2);
 				$row2 = $result2->fetch_assoc();
-				$sql3 = "select Last_name from student where Id =".$row["Student_id_id"]."";
+				$sql3 = "select Last_name from student where Id =".$row["Student_id"]."";
 				$result3 =$mysqli->query($sql3);
 				$row3 = $result3->fetch_assoc();
 				echo "<tr> <td>" . $row["Registry"]. "</td>
