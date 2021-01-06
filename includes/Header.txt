@@ -3,7 +3,7 @@
 		<a class="nav-link" href="employees.php">Employees</a>
         <a class="nav-link" href="jobs.php">Jobs</a>
         <a class="nav-link" href="cities.php">Cities</a>
-        <a class="nav-link" href="students.php">Students</a>
+        <a class="nav-link" href="student.php">Students</a>
         <a class="nav-link" href="grades.php">Grades</a>
 	</div>
 </div>

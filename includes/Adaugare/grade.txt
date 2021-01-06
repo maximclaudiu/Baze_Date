@@ -11,7 +11,7 @@
 				}
 			}
 			?>
-		</datalist>
+		</datalist><br>
 	<label for="student">Student's ID:</label><br>
 		<input list="student" name="student" required>
 		<datalist id="student">
@@ -23,7 +23,7 @@
 				}
 			}
 			?>
-		</datalist>
+		</datalist><br>
 	<label for="grade">Grade:</label><br>
 		<input type="text" id="grade" name="grade" value="" required><br>
 	<label for="subject">Subject:</label><br>

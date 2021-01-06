@@ -19,7 +19,7 @@
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
 				echo "<tr> <th>CITY_ID</th> <th>CITY NAME</th>". 
 					"<th>ORIGIN COUNTRY</th> <th>POPULATION</th>  </tr>";
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="student")
 				echo "<tr> <th>STUDENT ID </th> <th>FIRST NAME</th> <th>LAST NAME</th>".
 				"<th>AGE</th> <th>GENDER</th> <th>CITY</th> ".
 				"<th>CLASS</th> </tr>";
@@ -39,7 +39,7 @@
 				include "../includes/Adaugare/job.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="cities")
 				include "../includes/Adaugare/city.txt";
-			if (basename($_SERVER["REQUEST_URI"], ".php")=="students")
+			if (basename($_SERVER["REQUEST_URI"], ".php")=="student")
 				include "../includes/Adaugare/stud.txt";
 			if (basename($_SERVER["REQUEST_URI"], ".php")=="grades")
 				include "../includes/Adaugare/grade.txt";
