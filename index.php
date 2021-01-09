@@ -17,7 +17,7 @@
 		<a class="nav-link" href="Pages/employees.php">Employees</a>
         <a class="nav-link" href="Pages/jobs.php">Jobs</a>
         <a class="nav-link" href="Pages/cities.php">Cities</a>
-        <a class="nav-link" href="Pages/students.php">Students</a>
+        <a class="nav-link" href="Pages/student.php">Students</a>
         <a class="nav-link" href="Pages/grades.php">Grades</a>
 	</div>
 </div>
